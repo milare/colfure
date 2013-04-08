@@ -16,3 +16,9 @@
   (is (= 0.0 (cos [1 2 3] [0 0 0])))
   (is (= (/ 1 (* (Math/sqrt 3) 1) (cos [1 1 1] [0 1 0]))))
   (is (= (/ 2 (* (Math/sqrt 6) (Math/sqrt 3))) (cos [-1 2 1] [1 1 1]))))
+
+(deftest test-parametrize
+  (is (= [0 0 0] (parametrize [] 3)))
+  (is (= [1 0 0 1 0 0] (parametrize [0 3] 6)))
+  (is (= [1 1 0 1] (parametrize [0 1 3] 4))))
+
