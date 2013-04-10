@@ -27,7 +27,7 @@
       (or (handler req)
           (json-response {"error" "resource not found"} (:not-found error-codes)))
       (catch JsonParseException e
-                (json-response {"error" "malformed json"} (:invalid error-codes))))))
+          (json-response {"error" "malformed json"} (:invalid error-codes))))))
 
 (def app
   (-> handler
