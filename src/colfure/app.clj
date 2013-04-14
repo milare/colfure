@@ -1,4 +1,4 @@
-(ns colfure.web
+(ns colfure.app
   (:use compojure.core)
   (:use ring.middleware.json-params)
   (:import org.codehaus.jackson.JsonParseException)
@@ -29,7 +29,7 @@
       (catch JsonParseException e
                 (json-response {"error" "malformed json"} (:invalid error-codes))))))
 
-(def app
+(def run
   (-> handler
     wrap-json-params
     wrap-error-handling))

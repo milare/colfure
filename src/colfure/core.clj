@@ -1,8 +1,9 @@
 (ns colfure.core
   (:gen-class)
   (:use ring.adapter.jetty)
-  (:require colfure.vec colfure.web))
+  (:require colfure.vec
+            [colfure.app :as app]))
 
 (defn -main []
-  (run-jetty #'colfure.web/app {:port 8080})
+  (run-jetty #'app/run {:port 8080})
 )
