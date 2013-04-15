@@ -8,5 +8,7 @@
                  [ring/ring-jetty-adapter "1.1.8"]
                  [ring-json-params "0.1.3"]
                  [compojure "1.1.5"]
+                 [congomongo "0.4.1"]
+                 [clojurewerkz/neocons "1.0.3"]
                  [clj-json "0.5.1"]]
   :main colfure.core )
